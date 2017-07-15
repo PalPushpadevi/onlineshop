@@ -7,6 +7,11 @@
 <title>online shopping</title>
 </head>
 <body>
+
+<div class="row">
+
 ${greeting};
+</div>
+<P>HELLO EVRYONE</P>
 </body>
 </html>
