@@ -7,11 +7,40 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PageController 
 {
-@RequestMapping(value = {"/" ,"home" , "index"} )
+@RequestMapping(value = {"/","home" , "index"} )
 public ModelAndView index()
 {
 	ModelAndView mv=new ModelAndView("page");
-	mv.addObject("greeting" , "Welcome to Spring MVC");
+	mv.addObject("title" , "home");
+	mv.addObject("userClickHome" , true);
+	return mv;
+}
+
+
+@RequestMapping(value ="About")
+public ModelAndView about()
+{
+	ModelAndView mv=new ModelAndView("page");
+	mv.addObject("title" , "about");
+	mv.addObject("userClickAbout" , true);
+	return mv;
+}
+
+@RequestMapping(value ="login")
+public ModelAndView login()
+{
+	ModelAndView mv=new ModelAndView("page");
+	mv.addObject("title" , "Login");
+	mv.addObject("userClicklogin" , true);
+	return mv;
+}
+@RequestMapping(value ="Registration")
+public ModelAndView Registration()
+{
+	ModelAndView mv=new ModelAndView("page");
+	mv.addObject("title" , "Registration");
+	mv.addObject("userClickRegistration" , true);
 	return mv;
 }
 }
+
