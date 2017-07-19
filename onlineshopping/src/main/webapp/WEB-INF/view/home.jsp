@@ -24,13 +24,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img src="/assets/images/rainy.jpg" >
+                                    <img class="slide-image" src="${images}/kid4.jpg" style="max-height:800px">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    <img class="slide-image" src="${images}/kid3.jpg" style="max-height:800px">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                     <img class="slide-image" src="${images}/kid2.jpg" style="max-height:800px">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">

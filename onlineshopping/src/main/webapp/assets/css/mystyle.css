@@ -9,7 +9,7 @@ body {
 }
 
 .slide-image {
-    width: 100%;
+    width: 50%;
 }
 
 .carousel-holder {
@@ -66,11 +66,10 @@ footer p {
     line-height: 100%;
 }
 
-.navbar-header
+.topnav
 {
-	background-color:#424558;
+	background-color:#00ffff
 }
-
 
 .white{
     color:#000;

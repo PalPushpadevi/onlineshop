@@ -1,4 +1,5 @@
-<div class="topnav" id="myTopnav">
+ <link href="${css}/mysyle.css" rel="stylesheet">
+ <div class="topnav" id="myTopnav">
     <div class="container">
 
         <div class="navbar-header">
@@ -10,7 +11,7 @@
             </button>
             <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
                 <img style="max-width:100px; margin-top: -7px;"
-                     src=" ">
+                     src="${images}/newlogo1.jpg">
             </a>
         </div>
         
@@ -22,15 +23,13 @@
                 <li><a href="${contextRoot}/login">Login</a></li>
                 <li><a href="${contextRoot}/contact">Contact</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="#">Trendy</a></li>
+                        <li><a href="#">Indian</a></li>
+                        <li><a href="#">casual</a></li>
+                        <li><a href="#">part wear</a></li>
+                       
                     </ul>
                 </li>
             </ul>

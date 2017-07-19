@@ -3,12 +3,12 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ taglib prefix="spring"  uri="http://www.springframework.org/tags"%>
     <spring:url var="css" value="/resources/css"/>
-      <spring:url var="js" value="/resources/js"/>
-        <spring:url var="images" value="/resources/images"/>
+     <spring:url var="js" value="/resources/js"/>
+     <spring:url var="images" value="/resources/images/"/>
    <c:set var="contextRoot" value="${pageContext.request.contextPath }" />
 <!DOCTYPE html>
 <html>
-
+<div class="container">
 <head>
 
     <meta charset="utf-8">
@@ -31,8 +31,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+      <img src="${images}/kids.jpg">
 </head>
+</div>
 
 <body>
 
@@ -59,6 +60,11 @@
     <%@include file="login.jsp" %>
     </c:if>
     
+    <!-- contact -->
+    
+     <c:if test="${userClickcontact == true }">
+    <%@include file="contact.jsp" %>
+    </c:if>
     <!-- /.container -->
 
    <!-- footer -->

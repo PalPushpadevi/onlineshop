@@ -42,5 +42,13 @@ public ModelAndView Registration()
 	mv.addObject("userClickRegistration" , true);
 	return mv;
 }
+@RequestMapping(value ="contact")
+public ModelAndView contact()
+{
+	ModelAndView mv=new ModelAndView("page");
+	mv.addObject("title" , "contact");
+	mv.addObject("userClickcontact" , true);
+	return mv;
+}
 }
 
