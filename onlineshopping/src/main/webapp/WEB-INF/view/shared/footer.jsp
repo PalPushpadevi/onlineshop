@@ -1,7 +1,7 @@
 
 
 
- <div class="container">
+ <div class="container footer">
 
         <hr>
 

@@ -18,6 +18,9 @@
     <meta name="author" content="">
 
     <title>Seasonal Wear- ${title} </title>
+    <script>
+    window.menu="${title}";
+    </script>
 
     <!-- Bootstrap Core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -36,12 +39,12 @@
 </div>
 
 <body>
-
+<div class="wrapper">
  <!-- Navigation -->
    <%@include file="./shared/nav.jsp" %>
 
     <!-- Page Content -->
-    
+    <div class="content">
     <c:if test="${userClickHome == true }">
     <%@include file="home.jsp" %>
     </c:if>
@@ -65,6 +68,7 @@
      <c:if test="${userClickcontact == true }">
     <%@include file="contact.jsp" %>
     </c:if>
+    </div>
     <!-- /.container -->
 
    <!-- footer -->
@@ -77,7 +81,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="${js}/bootstrap.min.js"></script>
-
+</div>
 </body>
 
 </html>
