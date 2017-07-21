@@ -1,12 +1,7 @@
-<style>
-.navbar-header
-{
-background-color:#fff;
-}
-</style> 
- <div class="topnav" id="myTopnav">
-    <div class="container">
 
+ 
+    <div class="container">
+ <div class="topnav" id="myTopnav">
         <div class="navbar-header">
             <button  type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -15,9 +10,9 @@ background-color:#fff;
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
-                <img style="max-width:100px; margin-top: -7px;"
-                     src="${images}/newlogo1.jpg">
+                <img src="${images}/newlogo1.jpg" style="background-color:#0000ff" height="30px" width="40px">
             </a>
+           
         </div>
         
         <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">

@@ -12,6 +12,14 @@
 		<spring.version>4.3.8.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+	
+	<!-- backend linking -->
+	<dependency>
+	<groupId>ecom</groupId>
+  <artifactId>onlineshop_back</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	
+	</dependency>
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
