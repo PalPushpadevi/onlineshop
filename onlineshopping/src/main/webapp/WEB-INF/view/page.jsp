@@ -68,6 +68,11 @@
      <c:if test="${userClickcontact == true }">
     <%@include file="contact.jsp" %>
     </c:if>
+    
+    <!-- load only when user click  -->
+     <c:if test="${userClickAllProduts == true  or userClickCategory == true}">
+    <%@include file="listProducts.jsp" %>
+    </c:if>
     </div>
     <!-- /.container -->
 
@@ -81,6 +86,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="${js}/bootstrap.min.js"></script>
+    <script src="${js}/myapp.js"></script>
 </div>
 </body>
 

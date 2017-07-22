@@ -1,6 +1,7 @@
-package UserModel;
+package ecom.onlineshop_back.dto;
 
-public class category
+
+public class Category
 {
 	
 
