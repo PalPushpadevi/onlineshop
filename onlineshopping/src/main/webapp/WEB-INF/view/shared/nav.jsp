@@ -22,7 +22,8 @@
                 <li id="reg"><a href="${contextRoot}/Registration">Registration</a></li>
                 <li id="login"><a href="${contextRoot}/login">Login</a></li>
                 <li id="contact"><a href="${contextRoot}/contact">Contact</a></li>
-                 <li id="product"><a href="${contextRoot}/show/all/products">View Product</a></li>
+                 <li id="listProducts"><a href="${contextRoot}/show/all/products">View Products</a></li>
+               
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">view <span class="caret"></span></a>
                     <ul class="dropdown-menu">

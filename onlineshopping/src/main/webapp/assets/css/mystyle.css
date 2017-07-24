@@ -73,12 +73,13 @@ footer
 {
 	position:absolute;
 	bottom:25px;
-	height:60px;
+	height:80px;
 }
 
 .topnav
 {
 	background-color:#0000ff;
+
 }
 
 .white{
@@ -130,4 +131,12 @@ footer
 	background: rgba(255, 255, 255, 0.8);
 	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
 }
+
+
+
+   
+    
+
+
+
 

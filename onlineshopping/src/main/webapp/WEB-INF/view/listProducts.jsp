@@ -3,19 +3,19 @@
 	<div class="row">
 
 		<!-- to display sidebar -->
-		<div class="col-mid-3">
+		<div class="col-md-3">
 
 
 
-			    <%@include file="./shared/sidebar.jsp" %>
+			  <%@include file="./shared/sidebar.jsp" %>
 
 
 
 		</div>
 
 		<!-- to display the actual product -->
-		<div class="col-mid-9">
-			<!-- addind breadcrumb com -->
+		<div class="col-md-9">
+			<!-- adding breadcrumb com -->
 
 			<div class="row">
 

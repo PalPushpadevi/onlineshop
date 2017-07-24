@@ -15,6 +15,9 @@ $(function(){
 	case 'contact':
 		$("#contact").addclass("active");
 		break;
+	case 'All Products' :
+		$("#listProducts").addclass("active");
+		break;
 	default:
 		$("#home").addclass("active");
 		break;

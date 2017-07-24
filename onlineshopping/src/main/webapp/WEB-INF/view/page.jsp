@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <div class="container">
-<head>
+<header class="topbar">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +35,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
       <img src="${images}/kids.jpg">
-</head>
+</header>
 </div>
 
 <body>
@@ -70,9 +70,10 @@
     </c:if>
     
     <!-- load only when user click  -->
-     <c:if test="${userClickAllProduts == true  or userClickCategory == true}">
+     <c:if test="${userClickAllProducts == true  or userClickCategory == true}">
     <%@include file="listProducts.jsp" %>
     </c:if>
+    
     </div>
     <!-- /.container -->
 

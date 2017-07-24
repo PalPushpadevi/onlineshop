@@ -67,7 +67,7 @@ public ModelAndView contact()
  * 
  */
 
-@RequestMapping(value = {"/show/all/products"} )
+@RequestMapping(value ="/show/all/products" )
 public ModelAndView showAllProducts()
 {
 	ModelAndView mv=new ModelAndView("page");
@@ -80,7 +80,7 @@ public ModelAndView showAllProducts()
 	return mv;
 }
 
-@RequestMapping(value = {"/show/category/{id}/products"} )
+@RequestMapping(value ="/show/category/{id}/products")
 public ModelAndView showcategoryProducts(@PathVariable("id") int id)
 {
 	ModelAndView mv=new ModelAndView("page");
