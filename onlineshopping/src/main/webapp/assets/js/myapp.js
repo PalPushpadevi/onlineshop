@@ -3,23 +3,24 @@ $(function(){
 	{
 	
 	case 'about':
-		$("#about").addclass("active");
+		$('#about').addClass('active');
 		break;
 	
 	case 'Login':
-		$("#login").addclass("active");
+		$('#login').addClass('active');
 		break;
 	case 'Registration':
-		$("#reg").addclass("active");
+		$('#reg').addClass('active');
 		break;
 	case 'contact':
-		$("#contact").addclass("active");
+		$('#contact').addClass('active');
 		break;
 	case 'All Products' :
-		$("#listProducts").addclass("active");
+		$('#listProducts').addClass('active');
 		break;
 	default:
-		$("#home").addclass("active");
+		$('#listProducts').addClass('active');
+		$('#a_'+menu).addClass('active');
 		break;
 	
 		

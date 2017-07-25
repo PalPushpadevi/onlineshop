@@ -34,11 +34,18 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-      <img src="${images}/kids.jpg">
+      
 </header>
 </div>
 
 <body>
+<div class='container'>
+<div class='row'>
+<div class='col-lg-12'>
+<img src="${images}/kids.jpg">
+</div>
+</div>
+</div>
 <div class="wrapper">
  <!-- Navigation -->
    <%@include file="./shared/nav.jsp" %>
@@ -70,7 +77,7 @@
     </c:if>
     
     <!-- load only when user click  -->
-     <c:if test="${userClickAllProducts == true  or userClickCategory == true}">
+     <c:if test="${userClickAllProducts == true  or userClickCategoryProducts == true}">
     <%@include file="listProducts.jsp" %>
     </c:if>
     
