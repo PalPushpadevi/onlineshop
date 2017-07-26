@@ -3,14 +3,23 @@ package ecom.onlineshop_back.daoimpl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import ecom.onlineshop_back.dao.CategoryDAO;
 import ecom.onlineshop_back.dto.Category;
 
+
+
 @Repository("categoryDAO")
 public class CategoryDaoImpl implements CategoryDAO
 {
+
+@Autowired
+public SessionFactory SessionFactory;
+
 public static List<Category> categories = new ArrayList<>();
 
 	static 
@@ -58,5 +67,32 @@ public Category get(int id)
 	
 	return null;
 }
+
+
+
+@Override
+@Transactional
+public boolean add(Category category) 
+{
+	try
+	{
+		//adding category data into db;
+		SessionFactory.getCurrentSession().persist(category);
+		
+		return true;
+	}
+	catch(Exception ex)
+	{
+		ex.printStackTrace();
+		return false;
+	}
+	
+}
+
+
+
+
+
+
 
 }

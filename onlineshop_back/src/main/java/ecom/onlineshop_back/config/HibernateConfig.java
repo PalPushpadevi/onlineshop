@@ -9,9 +9,10 @@ import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.orm.hibernate4.HibernateTransactionManager;
-import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 
 @Configuration
 @ComponentScan(basePackages={"ecom.onlineshop_back.dto"})
@@ -65,7 +66,7 @@ public class HibernateConfig
 				properties.put("HibernateDialect",DATABASE_DIALECT);
 				properties.put("Hibernate.show_sql", true);
 				properties.put("Hibernate.format_sql", true);
-				return null;
+				return properties;
 			}
 			
 			
