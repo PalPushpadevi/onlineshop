@@ -14,44 +14,21 @@ import ecom.onlineshop_back.dto.Category;
 
 
 @Repository("categoryDAO")
+@Transactional
 public class CategoryDaoImpl implements CategoryDAO
 {
 
-@Autowired
-public SessionFactory SessionFactory;
+@Autowired(required=true)
+private SessionFactory sessionFactory;
 
-public static List<Category> categories = new ArrayList<>();
 
-	static 
-	{
-		Category cat=new Category();
-		/* adding first category*/
-		
-		cat.setId(1);
-		cat.setName("trendy");
-		cat.setDescription("have a some trendy look");
-		cat.setImageurl("imageurl");
-		cat.setActive(true);
-		categories.add(cat);
-		
-				/* adding second category*/
-		cat=new Category();
-		cat.setId(2);
-		cat.setName("traditional");
-		cat.setDescription("have a some traditional look");
-		cat.setImageurl("imageurl");
-		cat.setActive(true);
-		categories.add(cat);
-			
-
-	}
 	
 	
 	
 @Override
 	public List<Category> list() {
 		// TODO Auto-generated method stub
-		return categories;
+		return null;
 	}
 
 
@@ -59,34 +36,60 @@ public static List<Category> categories = new ArrayList<>();
 @Override
 public Category get(int id) 
 {
-	//enhance for loop
-	for(Category category : categories)
-	{
-	if(category.getId() == id)	return category;
-	}
 	
-	return null;
+	//getting category id
+	return  sessionFactory.getCurrentSession().get(Category.class, Integer.valueOf(id));
 }
 
 
 
 @Override
-@Transactional
+
 public boolean add(Category category) 
 {
 	try
 	{
 		//adding category data into db;
-		SessionFactory.getCurrentSession().persist(category);
+		sessionFactory.getCurrentSession().persist(category);
 		
 		return true;
 	}
+	
 	catch(Exception ex)
 	{
 		ex.printStackTrace();
 		return false;
 	}
 	
+}
+
+
+
+@Override
+public boolean update(Category category) 
+{
+	
+	try
+	{
+		//adding category data into db;
+		sessionFactory.getCurrentSession().update(category);
+		
+		return true;
+	}
+	
+	catch(Exception ex)
+	{
+		ex.printStackTrace();
+		return false;
+	}
+}
+
+
+
+@Override
+public boolean delete(Category category) {
+	// TODO Auto-generated method stub
+	return false;
 }
 
 

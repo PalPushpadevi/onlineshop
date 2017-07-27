@@ -15,9 +15,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
-@ComponentScan(basePackages={"ecom.onlineshop_back.dto"})
+@ComponentScan(basePackages={"ecom.onlineshop_back"})
 @EnableTransactionManagement
-
 public class HibernateConfig 
 
 {
@@ -63,33 +62,20 @@ public class HibernateConfig
 			
 			{
 				Properties properties=new Properties();
-				properties.put("HibernateDialect",DATABASE_DIALECT);
-				properties.put("Hibernate.show_sql", true);
-				properties.put("Hibernate.format_sql", true);
+				properties.put("hibernate.dialect",DATABASE_DIALECT);
+				properties.put("hibernate.show_sql", true);
+				properties.put("hibernate.format_sql", true);
+			
 				return properties;
 			}
 			
 			
 			@Bean
-			public HibernateTransactionManager getTransactionManager(SessionFactory sessionfactory)
+			public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory)
 			{
-				HibernateTransactionManager TransactionManager=new HibernateTransactionManager(sessionfactory);
+				HibernateTransactionManager TransactionManager=new HibernateTransactionManager(sessionFactory);
 				return TransactionManager;
 			}
 			
-			
-			
-		
-			
-
-
-
-
-
-
-
-
-
-
 
 }

@@ -26,7 +26,7 @@ public class CategoryTestCase
 		categoryDAO=(CategoryDAO)context.getBean("categoryDAO");
 	}
 	
-	@Test
+	/*@Test
 	public void testAddCategory()
 	{
 		category=new Category();
@@ -34,8 +34,27 @@ public class CategoryTestCase
 		category.setDescription("have a some trendy look");
 		category.setImageurl("imageurl");
 		assertEquals("sucessfully added category", true, categoryDAO.add(category));
+	}*/
+/*
+@Test
+public void testGetCategory()
+{
+	category=categoryDAO.get(1);
+	assertEquals("sucessfully added category", "trendy", category.getName());
+	
+	
+}*/
+	
+	
+	@Test
+	public void testupdateCategory()
+	{
+		category=categoryDAO.get(1);
+	category.setName("Trendy");
+		
+		assertEquals("sucessfully updated category", true, categoryDAO.update(category));
+		
+		
 	}
-
-
 	
 }
