@@ -122,7 +122,7 @@ public void testGetCategory()
 			//category List
 			
 			category=categoryDAO.get(1);
-			assertEquals("sucessfully retrive from category", 2, categoryDAO.list().size());
+			assertEquals("sucessfully retrive from category", 5 , categoryDAO.list().size());
 			
 		
 		

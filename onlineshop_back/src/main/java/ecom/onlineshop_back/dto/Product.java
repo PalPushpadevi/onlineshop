@@ -13,6 +13,7 @@ public class Product
 {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="PID")
 	private int id;
 	private String code;
 	private String name;
@@ -22,7 +23,7 @@ public class Product
 	private double unitPrice;
 	
 	@Column(name=" IS_ACTIVE")
-	private boolean isActive;
+	private boolean active;
 	
 	@Column(name=" CATEGORY_ID")
 	private int categoryId;
@@ -135,16 +136,16 @@ public class Product
 
 
 
-	public boolean isActive() {
-		return isActive;
+	public boolean active() {
+		return active;
 	}
 
 
 
 
 
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 

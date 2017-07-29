@@ -94,6 +94,11 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="${js}/bootstrap.min.js"></script>
+    
+    
+    <!-- datatable -->
+     <script src="${js}/jquery.dataTables.js"></script>
+     
     <script src="${js}/myapp.js"></script>
 </div>
 </body>
