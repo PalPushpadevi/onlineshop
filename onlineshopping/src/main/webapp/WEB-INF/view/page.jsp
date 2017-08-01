@@ -20,10 +20,13 @@
     <title>Seasonal Wear- ${title} </title>
     <script>
     window.menu="${title}";
+    window.contextRoot="${contextRoot}";
     </script>
 
     <!-- Bootstrap Core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
+    <!-- datatable css -->
+     <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="${css}/mystyle.css" rel="stylesheet">
@@ -96,8 +99,12 @@
     <script src="${js}/bootstrap.min.js"></script>
     
     
-    <!-- datatable -->
+    <!-- datatable plugin -->
      <script src="${js}/jquery.dataTables.js"></script>
+     
+     <!-- datatable -->
+     
+      <script src="${js}/dataTables.bootstrap.js"></script>
      
     <script src="${js}/myapp.js"></script>
 </div>
