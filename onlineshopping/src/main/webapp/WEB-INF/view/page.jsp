@@ -19,8 +19,8 @@
 
     <title>Seasonal Wear- ${title} </title>
     <script>
-    window.menu="${title}";
-    window.contextRoot="${contextRoot}";
+    window.menu='${title}';
+    window.contextRoot='${contextRoot}';
     </script>
 
     <!-- Bootstrap Core CSS -->

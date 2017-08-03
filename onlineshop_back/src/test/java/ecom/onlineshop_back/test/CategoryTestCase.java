@@ -118,11 +118,11 @@ public void testGetCategory()
 			
 			category=categoryDAO.get(1);
 			assertEquals("sucessfully deleted category", true, categoryDAO.delete(category));
-			
+	
 			//category List
 			
 			category=categoryDAO.get(1);
-			assertEquals("sucessfully retrive from category", 5 , categoryDAO.list().size());
+			assertEquals("sucessfully retrive from category", 3 , categoryDAO.list().size());
 			
 		
 		

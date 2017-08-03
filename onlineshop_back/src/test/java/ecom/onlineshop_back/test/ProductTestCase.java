@@ -62,14 +62,14 @@ private static AnnotationConfigApplicationContext context;
 	@Test
 	public void testlistActiveProducts()
 	{
-		assertEquals("retrive the list", 5, productDAO.listActiveProducts().size());	
+		assertEquals("retrive the list", 3, productDAO.listActiveProducts().size());	
 	}
 	
 	@Test
 	public void testlistActiveProductsByCategory()
 	{
 		assertEquals("retrive the list", 2, productDAO.listActiveProductsByCategory(1).size());	
-		assertEquals("retrive the list", 3, productDAO.listActiveProductsByCategory(3).size());
+		assertEquals("retrive the list", 1, productDAO.listActiveProductsByCategory(3).size());
 	}
 	
 	
