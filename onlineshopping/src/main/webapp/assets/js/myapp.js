@@ -15,7 +15,7 @@ $(function(){
 	case 'contact':
 		$('#contact').addClass('active');
 		break;
-	case 'All Products' :
+	case 'All Products':
 		$('#listProducts').addClass('active');
 		break;
 	default:
@@ -36,14 +36,14 @@ $(function(){
 	if($table.length)
 		{
 		
-		var jsonurl=  '';
-		if(window.categoryId==  '')
+		var jsonUrl= '';
+		if(window.categoryId == '')
 		{
-			jsonurl =window.contextRoot + '/json/data/all/products';
+			jsonUrl = window.contextRoot + '/json/data/all/products';
 		}
 		else
 			{
-			jsonurl=window.contextRoot + '/json/data/category/'+window.categoryId+ '/products';
+			jsonUrl = window.contextRoot + '/json/data/category/'+window.categoryId+'/products';
 			}
 		
 		//console.log('inside the table');
@@ -52,15 +52,61 @@ $(function(){
 			
 			lengthMenu:[[3,5,-1], ['3 Records','5 Records','All']],
 			pageLength:3,
-			ajax: 
+			ajax:
 			{
 				url:jsonUrl,
-				datSrc: ''
+				dataSrc:'',
+			
 			},
 			columns:[
-			       {data:'name'} ,
-			       {data:'brand'}  ,
-			       {data:'unitPrice'}  
+			         {
+			        data: 'code',
+			        mRender: function(data,type,row)
+			        {
+			        	
+			        return '<img src="'+window.contextRoot+'/resources/images/'+data+'.jpg" class="dataTableImg"/>';
+			       
+			        }
+			        	 
+			         },
+			       {
+			    	 data: 'name'
+			        } ,
+			      
+			    	 {
+			    	data:'brand'
+			    	} ,
+			    	
+			       {
+			    		data:'unitPrice',
+			    		mRender: function(data,type,row)
+			    		{
+			    			return '&#8377;'  + data
+			    		}
+			    			
+			       },
+			       {
+			       data: 'id',
+			       bSortable: false,
+			       mRender: function(data,type,row)
+			       {
+			    	   var str = '';
+			    	   str += '<a href="'+window.contextRoot+'/show/'+data+'/product" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a> &#160;';
+			    	   str += '<a href="'+window.contextRoot+'/cart/add/'+data+'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
+			       return str
+			     
+			       }
+			    
+			    	   
+			    	   
+			    	   
+			    	   
+			    	   
+			       } 
+			    	
+			    	
+			    	
+			    	
 			        
 			         ]
 		
