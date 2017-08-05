@@ -11,7 +11,7 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="ecom.onlineshopping.controller" />
+	<context:component-scan base-package="ecom.onlineshopping" />
 	<context:component-scan base-package="ecom.onlineshop_back" />
 	
 	<bean id="viewResolver"
