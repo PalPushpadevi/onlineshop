@@ -10,6 +10,8 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 
 public class GlobalExceptionHandler 
 {
+	
+
 @ExceptionHandler(NoHandlerFoundException.class)
 public ModelAndView handlerNoHandlerFoundException()
 {

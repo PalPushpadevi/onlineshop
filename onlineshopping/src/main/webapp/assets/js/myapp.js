@@ -116,10 +116,21 @@ $(function(){
 		
 		});
 		
-		
-		
-		
 		}
+	
+	//dissmissing the alert within a sec
+	
+	var $alert=$('.alert');
+	if($alert.length)
+		{
+		setTimeout(function()
+				{
+			
+			$alertfadeOut('slow');
+				}, 3000)
+		}
+	
+	
 	
 	
 	

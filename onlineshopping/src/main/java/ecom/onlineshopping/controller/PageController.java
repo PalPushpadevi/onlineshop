@@ -35,7 +35,7 @@ public ModelAndView index()
 	
 	return mv;
 }
-/**
+
 
 @RequestMapping(value ="About")
 public ModelAndView about()
