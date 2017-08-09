@@ -28,7 +28,7 @@ private static AnnotationConfigApplicationContext context;
 		productDAO=(ProductDAO)context.getBean("productDAO");
 	}
 	
-	/*@Test
+	@Test
 	public void testCRUDProduct()
 	{
 		//create operation
@@ -58,7 +58,7 @@ private static AnnotationConfigApplicationContext context;
 	assertEquals("retrive the list", 4, productDAO.list().size());
 
 	
-	}*/
+	}
 	@Test
 	public void testlistActiveProducts()
 	{

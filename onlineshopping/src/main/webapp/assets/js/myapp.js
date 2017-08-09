@@ -99,16 +99,8 @@ $(function(){
 			       return str
 			     
 			       }
-			    
-			    	   
-			    	   
-			    	   
-			    	   
-			    	   
+			      
 			       } 
-			    	
-			    	
-			    	
 			    	
 			        
 			         ]
@@ -120,13 +112,13 @@ $(function(){
 	
 	//dissmissing the alert within a sec
 	
-	var $alert=$('.alert');
+	var $alert = $('.alert');
 	if($alert.length)
 		{
 		setTimeout(function()
 				{
 			
-			$alertfadeOut('slow');
+			$alert.fadeOut('slow');
 				}, 3000)
 		}
 	

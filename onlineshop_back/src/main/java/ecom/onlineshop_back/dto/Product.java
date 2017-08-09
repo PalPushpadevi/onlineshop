@@ -7,6 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 public class Product 
@@ -16,10 +21,18 @@ public class Product
 	@Column(name="PID")
 	private int id;
 	private String code;
+	@NotBlank(message="Please enter the Product Name")
 	private String name;
+	
+	@NotBlank(message="Please enter the Brand Name")
 	private String brand;
+	
+	@NotBlank(message="Please enter the Product Description")
 	private String description;
+	
+	
 	@Column(name=" UNIT_PRICE")
+	@Min(value=1, message="Price should not be less than 1")
 	private double unitPrice;
 	
 	@Column(name=" IS_ACTIVE")
@@ -30,41 +43,41 @@ public class Product
 	
 	@Column(name="SUPPLIER_ID")
 	private int supplierId;
+	
+
 	private int purchases;
 	
 	@Column(name="PRO_VIEW")
 	private int proView;
 	
+	@Transient
+	private MultipartFile file;
 	
 	
 	
 	
-	
+
+	public MultipartFile getFile() {
+		return file;
+	}
+
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
+
 	public int getId() {
 		return id;
 	}
-
-
-
-
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
 
-
-
-
 	public String getCode() {
 		return code;
 	}
-
-
-
-
-
-	public void setCode(String code) {
+public void setCode(String code) {
 		this.code = code;
 	}
 
@@ -220,6 +233,18 @@ public class Product
 	public Product()
 	{
 		this.code="PRD"+ UUID.randomUUID().toString().substring(26).toUpperCase();
+	}
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", code=" + code + ", name=" + name
+				+ ", brand=" + brand + ", description=" + description
+				+ ", unitPrice=" + unitPrice + ", active=" + active
+				+ ", categoryId=" + categoryId + ", supplierId=" + supplierId
+				+ ", purchases=" + purchases + ", proView=" + proView + "]";
 	}
 
 }
