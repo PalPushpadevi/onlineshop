@@ -12,9 +12,7 @@ ${message}
 </div>
 </c:if>
 
-</div>
 
-</div>
 <div class="col-md-offset-2 col-md-8">
 
 <div class="panel panel-primary">
@@ -27,7 +25,7 @@ ${message}
 <div class="panel-body">
 <!-- Form Element -->
 <sf:form class="form-horizontal" modelAttribute="product"
-action="${contextRoot}/manage/products" method="POST" enctype="multipart/form.data">
+action="${contextRoot}/manage/products" method="POST" enctype="multipart/form-data">
 
 <div class="form-group">
 
@@ -112,29 +110,120 @@ itemValue="id"/>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 </sf:form>
 
+</div>
 
-
+</div>
 </div>
 
 </div>
 
+<div class="row">
+
+<div class="cols-xs-12">
+<h3>Available Products </h3>
+<hr/>
+
 </div>
+
+<div class="cols-xs-12">
+	<div style="overflow:auto">
+<!-- Product table for Admin -->
+	<table id="adminProductTable" class="table table-striped table-bordered">
+		<thead>
+		<tr>
+			<th>Id</th>
+			<th>&#160;</th>
+			<th>Name</th>
+			<!-- <th>Quantity</th> -->
+			<th>UnitPrice</th>
+			<th>Active</th>
+			<th>Edit</th>
+
+		</tr>
+		</thead>
+		
+		
+		<tbody>
+		<tr>
+		<td>4</td>
+		<td>
+		<img class="adminDataTableimg" src="${contextRoot}/resources/images/p005.jpg" alt="Suits" />		
+		</td>
+		<td>Suits</td>
+	    <td>&#8377; 1500.00</td>
+		<td>
+		<!-- toggle switch -->
+		<label calss="switch">
+		<input type="checkbox" checked="checked"  value="4" />
+		<
+		<div class="slider"></div>
+		</label> 
+		</td>
+		<td>
+		<a href="${contextRoot}/manage/4/product" class="btn btn-warning">
+		<span class="glyphicon glyphicon-pencil"></span>
+		</a>
+		
+		</td>
+		</tr>
+		<tr>
+		<td>4</td>
+		<td>
+		<img class="adminDataTableimg" src="${contextRoot}/resources/images/p005.jpg" alt="Suits" />		
+		</td>
+		<td>Suits</td>
+	    <td>&#8377; 1500.00</td>
+		<td>
+		<!-- toggle switch -->
+		<label calss="switch">
+		<input type="checkbox"   value="4"/>
+		<div class="slider"></div>
+		</label> 
+		</td>
+		<td>
+		<a href="${contextRoot}/manage/4/product" class="btn btn-warning">
+		<span class="glyphicon glyphicon-pencil"></span>
+		</a>
+		
+		</td>
+		</tr>
+		
+		
+		
+		</tbody>
+		
+		<tfoot>
+		<tr>
+			<th>Id</th>
+			<th>&#160;</th>
+			<th>Name</th>
+			
+			<th>UnitPrice</th>
+			<th>Active</th>
+			<th>Edit</th>
+			
+		</tr>
+		</tfoot>
+
+</table>
+
+
+
+</div>
+
+
 
 
 </div>
 
+
+
+
 </div>
+</div>
+
+
+
+

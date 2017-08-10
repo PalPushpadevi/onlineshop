@@ -53,10 +53,6 @@ public class Product
 	@Transient
 	private MultipartFile file;
 	
-	
-	
-	
-
 	public MultipartFile getFile() {
 		return file;
 	}
@@ -244,7 +240,7 @@ public void setCode(String code) {
 				+ ", brand=" + brand + ", description=" + description
 				+ ", unitPrice=" + unitPrice + ", active=" + active
 				+ ", categoryId=" + categoryId + ", supplierId=" + supplierId
-				+ ", purchases=" + purchases + ", proView=" + proView + "]";
+				+ ", purchases=" + purchases + ", proView=" + proView + " ]";
 	}
 
 }

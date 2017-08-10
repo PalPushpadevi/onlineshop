@@ -22,6 +22,7 @@ import ecom.onlineshop_back.dao.ProductDAO;
 import ecom.onlineshop_back.dto.Category;
 import ecom.onlineshop_back.dto.Product;
 import ecom.onlineshopping.util.FileUploadUtility;
+import ecom.onlineshopping.validator.ProductValidator;
 
 @Controller
 @RequestMapping("/manage")
@@ -66,6 +67,10 @@ public class ManagementController
 	@RequestMapping(value="/products",method=RequestMethod.POST)
 	public String handleProductSubmission(@Valid @ModelAttribute("product") Product mproduct ,BindingResult results,Model model,HttpServletRequest request)
 	{
+		
+		new ProductValidator().validate(mproduct, results);
+		
+		
 		//checking if there are any errors
 		
 		if(results.hasErrors())

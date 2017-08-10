@@ -139,10 +139,25 @@ footer
 	height:100px;
 }
 
-.helpblock
+.help-block
 {
 	color:#ff0080;
 }
+
+.adminDataTableimg
+{
+	height:50px;
+	width:50px;
+}
+
+.switch
+{
+	height:30px;
+	width:50px;
+	position:absolute;
+	display: inline-block;
+}
+
 
 
 
