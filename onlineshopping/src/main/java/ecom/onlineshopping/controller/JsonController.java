@@ -14,7 +14,7 @@ import ecom.onlineshop_back.dto.Product;
 @Controller
 @RequestMapping("/json/data")
 
-public class JacksonController 
+public class JsonController 
 {
 @Autowired
 private ProductDAO productDAO;
@@ -26,6 +26,14 @@ public List<Product> getAllProducts()
 	return productDAO.listActiveProducts();
 }
 
+
+
+@RequestMapping("/admin/all/products")
+@ResponseBody
+public List<Product> getAllProductsforadmin()
+{
+	return productDAO.list();
+}
 
 @RequestMapping("/category/{id}/products")
 @ResponseBody

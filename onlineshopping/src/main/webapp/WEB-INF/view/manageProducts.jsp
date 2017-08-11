@@ -136,7 +136,7 @@ itemValue="id"/>
 			<th>Id</th>
 			<th>&#160;</th>
 			<th>Name</th>
-			<!-- <th>Quantity</th> -->
+			<th>Brand</th>
 			<th>UnitPrice</th>
 			<th>Active</th>
 			<th>Edit</th>
@@ -145,7 +145,7 @@ itemValue="id"/>
 		</thead>
 		
 		
-		<tbody>
+		<!--  <tbody>
 		<tr>
 		<td>4</td>
 		<td>
@@ -154,20 +154,21 @@ itemValue="id"/>
 		<td>Suits</td>
 	    <td>&#8377; 1500.00</td>
 		<td>
-		<!-- toggle switch -->
-		<label calss="switch">
+		=============== toggle switch======================== 
+		<label class="switch">
 		<input type="checkbox" checked="checked"  value="4" />
-		<
-		<div class="slider"></div>
+	    <div class="slider"> </div>
 		</label> 
 		</td>
+		
 		<td>
 		<a href="${contextRoot}/manage/4/product" class="btn btn-warning">
 		<span class="glyphicon glyphicon-pencil"></span>
 		</a>
-		
 		</td>
 		</tr>
+		
+		
 		<tr>
 		<td>4</td>
 		<td>
@@ -176,8 +177,8 @@ itemValue="id"/>
 		<td>Suits</td>
 	    <td>&#8377; 1500.00</td>
 		<td>
-		<!-- toggle switch -->
-		<label calss="switch">
+		=======================================
+		<label class="switch">
 		<input type="checkbox"   value="4"/>
 		<div class="slider"></div>
 		</label> 
@@ -192,14 +193,14 @@ itemValue="id"/>
 		
 		
 		
-		</tbody>
+		</tbody> -->
 		
 		<tfoot>
 		<tr>
 			<th>Id</th>
 			<th>&#160;</th>
 			<th>Name</th>
-			
+			<th>brand</th>
 			<th>UnitPrice</th>
 			<th>Active</th>
 			<th>Edit</th>
