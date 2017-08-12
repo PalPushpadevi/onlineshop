@@ -59,9 +59,32 @@ public class ManagementController
 			{
 				mv.addObject("message","Product Added Successfully");
 			}
+			else if(operation.equals("category"))
+			{
+				mv.addObject("message","Category Added Successfully");	
+			}
 		}
 		return mv;
 	}
+	
+	@RequestMapping(value="/{id}/products",method=RequestMethod.GET)
+	
+	public ModelAndView showEditProducts(@PathVariable  int id)
+	{
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("userClickManageProducts",true);
+		mv.addObject("Title","Manage Products");
+		//fetch the product from the database
+		Product nProduct=productDAO.get(id);
+	//set the product fetch from the database
+		mv.addObject("product",nProduct);
+		
+		
+		return mv;
+	}
+	
+	
+	
 	
 	
 	//handling Product Submission
@@ -69,9 +92,18 @@ public class ManagementController
 	@RequestMapping(value="/products",method=RequestMethod.POST)
 	public String handleProductSubmission(@Valid @ModelAttribute("product") Product mproduct ,BindingResult results,Model model,HttpServletRequest request)
 	{
-		
+		//handle image validation
+		if(mproduct.getId() == 0){
 		new ProductValidator().validate(mproduct, results);
+		}
 		
+		else
+		{
+			if(!mproduct.getFile().getOriginalFilename().equals(""))
+			{
+				new ProductValidator().validate(mproduct, results);	
+			}
+		}
 		
 		//checking if there are any errors
 		
@@ -79,7 +111,7 @@ public class ManagementController
 		{
 			model.addAttribute("userClickManageProducts",true);
 			model.addAttribute("title","Manage Products");
-			
+			model.addAttribute("message","Validate fail for product submission");
 			return "page";
 		}
 		
@@ -87,8 +119,17 @@ public class ManagementController
 		
 		logger.info(mproduct.toString());
 		//create new Product
+		
+		if(mproduct.getId()==0)
+		{
 				productDAO.add(mproduct);
 				
+				
+		}
+		else
+		{
+			productDAO.update(mproduct);	
+		}
 				if(!mproduct.getFile().getOriginalFilename().equals(""))
 				{
 					FileUploadUtility.uploadFile(request,mproduct.getFile(),mproduct.getCode());
@@ -101,7 +142,7 @@ public class ManagementController
 		
 		
 	}
-	@RequestMapping(value="/product/{id}/activation", method=RequestMethod.POST)
+	@RequestMapping(value="/products/{id}/activation", method=RequestMethod.POST)
 	@ResponseBody
 	public String handleProductActivation(@PathVariable int id)
 	{
@@ -117,7 +158,13 @@ public class ManagementController
 							:"you have successfully activated the product"+product.getId();
 	}
 	
-	
+	//to handle category submission
+	@RequestMapping(value="category" , method=RequestMethod.POST)
+	public String handleCategorySubmission(@ModelAttribute Category category)
+	{
+		categoryDAO.add(category);
+		return "redirect:/manage/products?operation=category";
+	}
 	
 	
 	
@@ -126,6 +173,13 @@ public class ManagementController
 	public List<Category> getCategories()
 	{
 		return categoryDAO.list();
+	}
+	
+	
+	@ModelAttribute("category")
+	public Category getCategory()
+	{
+		return  new Category();
 	}
 
 }

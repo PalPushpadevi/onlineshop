@@ -216,7 +216,7 @@ $(function(){
 				       mRender: function(data,type,row)
 				       {
 				    	  var str='';
-				    	 str +=' <a href="${contextRoot}/manage/'+data+'/product" class="btn btn-warning">'
+				    	 str +=' <a href="'+window.contextRoot+'/manage/'+data+'/products" class="btn btn-warning">'
 				  		str +='<span class="glyphicon glyphicon-pencil"></span></a>'
 				  		
 				    	  return str 
@@ -250,7 +250,7 @@ $(function(){
 			        			{
 			        			console.log(value);
 			        			
-			        			var activationUrl=window.contextRoot + '/manage/product/' + value + '/activation';
+			        			var activationUrl=window.contextRoot + '/manage/products/' + value + '/activation';
 			        			$.post(activationUrl,function(data){
 			        				
 			        				bootbox.alert({

@@ -49,7 +49,7 @@ public ModelAndView about()
 @RequestMapping(value ="login")
 public ModelAndView login()
 {
-	ModelAndView mv=new ModelAndView("page");
+	ModelAndView mv=new ModelAndView("login");
 	mv.addObject("title" , "Login");
 	mv.addObject("userClicklogin" , true);
 	return mv;

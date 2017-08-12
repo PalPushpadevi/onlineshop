@@ -8,7 +8,7 @@
 			    	<h3 class="panel-title">Login via site</h3>
 			 	</div>
 			  	<div class="panel-body">
-			    	<form accept-charset="UTF-8" role="form">
+			    	<form action="${contetRoot}/login" method="POSt" class="form-horizontal" id="loginform">
                     <fieldset>
 			    	  	<div class="form-group">
 			    		    <input class="form-control" placeholder="yourmail@example.com" name="email" type="text">
