@@ -31,7 +31,7 @@ public class HibernateConfig
 			
 			//Datasource bean
 			
-			@Bean("datasource")
+			@Bean("dataSource")
 			public DataSource getDataSource()
 			{
 				BasicDataSource datasource=new BasicDataSource();

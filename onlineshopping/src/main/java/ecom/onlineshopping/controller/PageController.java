@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import ecom.onlineshop_back.dao.CategoryDAO;
@@ -47,9 +48,14 @@ public ModelAndView about()
 }
 
 @RequestMapping(value ="login")
-public ModelAndView login()
+public ModelAndView login(@RequestParam(name="error" , required=false) String error)
 {
-	ModelAndView mv=new ModelAndView("login");
+	ModelAndView mv=new ModelAndView("page");
+
+	if(error!=null)
+	{
+		mv.addObject("message","invalid username and password");
+	}
 	mv.addObject("title" , "Login");
 	mv.addObject("userClicklogin" , true);
 	return mv;
@@ -125,6 +131,17 @@ product.setProView(product.getProView() + 1);
 	mv.addObject("userClickShowProduct",true);
 	
 	
+	return mv;
+}
+
+@RequestMapping(value ="access-denied")
+public ModelAndView accessDenied()
+{
+	ModelAndView mv=new ModelAndView("error");
+	mv.addObject("title" , "403 Acess-denied");
+	mv.addObject("errorTitle" , "Sory");
+	mv.addObject("errorDescription" , "Your not authorized to view this page");
+
 	return mv;
 }
  

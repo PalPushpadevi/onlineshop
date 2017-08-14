@@ -124,8 +124,20 @@ $(function(){
 	
 	
 	
-	//--------------
+	//-to tackle the csrf token-------------
+	var token=$('meta[name="_csrf"]').attr('content');
+	var header=$('meta[name="_csrf_header"]').attr('content');
 	
+	if(token.length>0 && header.length>0)
+		{
+		//set the token header
+		
+		$(document).ajaxSend(function(ex,xhr,options)
+				{
+			xhr.setRequestHeader(header,token);
+			
+				});
+		}
 	
 	
 	//==============================================
@@ -291,10 +303,102 @@ $(function(){
 		
 		}
 	
+	//---------validation code for category-------------
+	
+	var $categoryform = $('#categoryform');
+	if(categoryform.length)
+		{
+		$categoryform.validate({
+			rules:
+				{
+				name:{
+					required:true,
+					
+					
+				},
+				
+				description:
+					{
+					required:true,
+					
+					}
+				
+				
+				},
+				
+				message:{
+					name:
+						{
+						required:"please select  the category"
+							
+						},
+						
+						description:
+							{
+							required: "please describe the category"
+							}
+				},
+				
+				errorElement : 'em',
+				errorPlacement: function(error,element)
+				{
+					error.addClass('help-block');
+					
+					error.inserAfter(element);
+				}
+				
+					
+			
+		})
+		}
+	//====validation for login==========
+	var $loginform = $('#loginform');
+	if(loginform.length)
+		{
+		$loginform.validate({
+			rules:
+				{
+				username:{
+					required:true,
+					email:true
+					
+				},
+				
+				passeord:
+					{
+					required:true,
+					
+					}
+				
+				
+				},
+				
+				message:{
+					username:
+						{
+						required:"please enter the username",
+						email:"please enter valid email"	
+						},
+						
+						password:
+							{
+							required: "please enter the password"
+							}
+				},
+				
+				errorElement : 'em',
+				errorPlacement: function(error,element)
+				{
+					error.addClass('help-block');
+					
+					error.inserAfter(element);
+				}
 	
 	
 	
 	
+		})
+		}
 	
 	
 	

@@ -243,7 +243,7 @@ itemValue="id"/>
 <!-- modal body -->
 <div class="modal-body">
 
-<sf:form modelAttribute="category" action="${contextRoot}/manage/category" method="POST">
+<sf:form modelAttribute="category" action="${contextRoot}/manage/category" method="POST" id="categoryform">
 
 <div class="form-group">
 <label for="category_name" class="control-label col-md-4">Category Name</label>
@@ -251,14 +251,13 @@ itemValue="id"/>
 
 <sf:input type="text" path="name"  id="category_name" class="form-control"/>
 </div>
-
 </div>
 
 <div class="form-group">
 <label for="category_description" class="control-label col-md-4">Category description</label>
 <div class="col-md-8">
 
-<sf:textarea cols="" rows="5" path="description" id="category_description" class="form-control"/>
+<sf:textarea rows="5" path="description" id="category_description" class="form-control"/>
 </div>
 
 </div>
@@ -269,10 +268,6 @@ itemValue="id"/>
 </div>
 
 </div>
-
-
-
-
 
 </sf:form>
 

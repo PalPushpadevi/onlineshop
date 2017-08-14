@@ -14,17 +14,19 @@
 	<context:component-scan base-package="ecom.onlineshop_back" />
 <http pattern="/resources/**" security="none" />
 <http>
-	<intercept-url pattern="/login" access="permitAll" />
-		<intercept-url pattern="/**" access="hasRole('USER')" />
+      <intercept-url pattern="/manage/**" access="hasAuthority('ADMIN')" />
+	   <intercept-url pattern="/cart/**" access="hasAuthority('USER')" />
+		 <intercept-url pattern="/**" access="permitAll" />
 		<form-login  login-page="/login"/>
+		<access-denied-handler error-page="/access-denied"/>
 		<logout />
 	</http>
 	<authentication-manager>
 		<authentication-provider>
 
-			<jdbc-user-service data-source-ref="datasource"
+			<jdbc-user-service data-source-ref="dataSource"
 				users-by-username-query="select email,password,enable from user_detail where email=?"
-				authorities-by-username-query="select eamil,role from user_detail where email=?" />
+				authorities-by-username-query="select email,role from user_detail where email=?" />
 
 		</authentication-provider>
 	</authentication-manager>
