@@ -311,7 +311,8 @@ $(function(){
 		$categoryform.validate({
 			rules:
 				{
-				name:{
+				name:
+				{
 					required:true,
 					
 					
@@ -344,7 +345,7 @@ $(function(){
 				{
 					error.addClass('help-block');
 					
-					error.inserAfter(element);
+					error.insertAfter(element);
 				}
 				
 					
@@ -391,7 +392,7 @@ $(function(){
 				{
 					error.addClass('help-block');
 					
-					error.inserAfter(element);
+					error.insertAfter(element);
 				}
 	
 	

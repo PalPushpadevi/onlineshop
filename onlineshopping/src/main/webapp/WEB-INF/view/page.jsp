@@ -40,7 +40,7 @@
     <![endif]-->
       
 </header>
-</div>
+
 
 <body>
 <div class='container'>
@@ -104,6 +104,8 @@
    <!-- footer -->
    
    <%@include file="./shared/footer.jsp" %>
+   </div>
+   
     <!-- /.container -->
 
     <!-- jQuery -->
@@ -126,6 +128,7 @@
       <script src="${js}/bootbox.min.js"></script>
      
     <script src="${js}/myapp.js"></script>
+
 </div>
 </body>
 

@@ -25,17 +25,7 @@
                  <li id="listProducts"><a href="${contextRoot}/show/all/products">View Products</a></li>
                
               <li id="manageProducts"><a href="${contextRoot}/manage/products">Manage Products</a></li>
-               
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">view <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Trendy</a></li>
-                        <li><a href="#">Indian</a></li>
-                        <li><a href="#">casual</a></li>
-                        <li><a href="#">part wear</a></li>
-                       
-                    </ul>
-                </li>
+             
             </ul>
 			
 		</div>

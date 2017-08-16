@@ -2,15 +2,20 @@ package ecom.onlineshopping.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import ecom.onlineshop_back.dao.CategoryDAO;
 import ecom.onlineshop_back.dao.ProductDAO;
+import ecom.onlineshop_back.dao.user_detailDAO;
 import ecom.onlineshop_back.dto.Category;
 import ecom.onlineshop_back.dto.Product;
+import ecom.onlineshop_back.dto.user_detail;
 import ecom.onlineshopping.exception.ProductNotFoundException;
 
 @Controller
@@ -68,6 +73,32 @@ public ModelAndView Registration()
 	mv.addObject("userClickRegistration" , true);
 	return mv;
 }
+//userdetail
+/*
+@RequestMapping(value="/saveregister",method=RequestMethod.POST)
+public ModelAndView saveRegister(@ModelAttribute("user") user_detail user, BindingResult res )
+{
+	ModelAndView mv=new ModelAndView("page");
+	
+	if(res.hasErrors())
+	{
+		mv.setViewName("Registration");
+		return mv;
+	}
+	else
+	{
+		user_detailDAO.insertUser(user);
+		mv.setViewName("redirect:/login");
+		return mv;
+		
+	}
+	
+}*/
+
+
+
+
+
 @RequestMapping(value ="contact")
 public ModelAndView contact()
 {
