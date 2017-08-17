@@ -1,25 +1,52 @@
 package ecom.onlineshop_back.dto;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 
 
 @Entity
-public class user_detail
+@Table(name="user_detail")
+public class User
 {
+	
 	@Id
-	 @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int uid;
 	private String fname;
 	private String lname;
 	private String email;
 	private String password;
 	private String role;
+	private String contact;
+	private boolean enabled=true;
+	@OneToOne(mappedBy="user" ,cascade=CascadeType.ALL)
+	private Cart cart;
 	
+	public Cart getCart() {
+		return cart;
+	}
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
 	
+	public String getContact() {
+		return contact;
+	}
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+	public boolean isEnabled() {
+		return enabled;
+	}
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 	public int getUid() {
 		return uid;
 	}
@@ -55,6 +82,13 @@ public class user_detail
 	}
 	public void setRole(String role) {
 		this.role = role;
+	}
+	
+	@Override
+	public String toString() {
+		return "User [uid=" + uid + ", fname=" + fname + ", lname=" + lname
+				+ ", email=" + email + ", password=" + password + ", role="
+				+ role + ", contact=" + contact + ", enabled=" + enabled + "]";
 	}
 
 }

@@ -12,10 +12,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ecom.onlineshop_back.dao.CategoryDAO;
 import ecom.onlineshop_back.dao.ProductDAO;
-import ecom.onlineshop_back.dao.user_detailDAO;
+import ecom.onlineshop_back.dao.UserDAO;
 import ecom.onlineshop_back.dto.Category;
 import ecom.onlineshop_back.dto.Product;
-import ecom.onlineshop_back.dto.user_detail;
+import ecom.onlineshop_back.dto.User;
 import ecom.onlineshopping.exception.ProductNotFoundException;
 
 @Controller
