@@ -365,7 +365,7 @@ $(function(){
 					
 				},
 				
-				passeord:
+				password:
 					{
 					required:true,
 					

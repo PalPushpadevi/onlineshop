@@ -15,7 +15,7 @@ PASSWORD VARCHAR(60),
 EMAIL VARCHAR(255),CONTACT VARCHAR(15), 
 CONSTRAINT pk_uid PRIMARY KEY (uid) );
 
- insert into user_detail(FNAME,LNAME,ROLE,ENABLE,PASSWORD,EMAIL,CONTACT) values('Pooja','Pal','ADMIN','true','poojaknp','pooja90@yahoo.com',9594260496);
+ insert into (FNAME,LNAME,ROLE,ENABLE,PASSWORD,EMAIL,CONTACT) values('Pooja','Pal','ADMIN','true','poojaknp','pooja90@yahoo.com',9594260496);
   insert into user_detail(FNAME,LNAME,ROLE,ENABLE,PASSWORD,EMAIL,CONTACT) values('Shreya','yadav','user','true','shreya','shreya@gmail.com',9594046863);
    insert into user_detail(FNAME,LNAME,ROLE,ENABLE,PASSWORD,EMAIL,CONTACT) values('Shailesh','Shyam','user','true','shaily','shail@gmail.com',8689858936);
    insert into user_detail(FNAME,LNAME,ROLE,ENABLE,PASSWORD,EMAIL,CONTACT) values('Aashish','kumar','ADMIN','true','ashu','ashish@yahoo.com',7738216638);

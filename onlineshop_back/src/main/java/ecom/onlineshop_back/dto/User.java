@@ -22,14 +22,21 @@ public class User
 	private String lname;
 	private String email;
 	private String password;
-	private String role;
+	private String role="user";
 	private String contact;
+	private String address;
 	private boolean enabled=true;
 	@OneToOne(mappedBy="user" ,cascade=CascadeType.ALL)
 	private Cart cart;
 	
 	public Cart getCart() {
 		return cart;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public void setCart(Cart cart) {
 		this.cart = cart;

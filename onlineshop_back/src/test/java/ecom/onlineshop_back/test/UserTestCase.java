@@ -34,11 +34,15 @@ private static AnnotationConfigApplicationContext context;
 	public void testAdd()
 	{
 		user=new User();
-		user.setFname("Yadav");
-		user.setLname("Krutika");
-		user.setEmail("krutika@gmail.com");
-		user.setPassword("krutika");
-		user.setRole("user");
+		user.setFname("Pal");
+		user.setLname("Pushpa");
+		user.setEmail("pushpa@gmail.com");
+		user.setPassword("pushpa");
+		user.setRole("Admin");
+		user.setAddress("chembur,Mumbai");
+		user.setContact("8689858488");
+	
+		
 		
 		//add the user
 		

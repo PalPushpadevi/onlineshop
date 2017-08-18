@@ -27,6 +27,10 @@ public class PageController
 	@Autowired
 	private ProductDAO productDAO;
 	
+	@Autowired
+	private UserDAO userDAO;
+	
+	
 	
 	
 @RequestMapping(value = {"/","home" , "index"} )
@@ -65,6 +69,8 @@ public ModelAndView login(@RequestParam(name="error" , required=false) String er
 	mv.addObject("userClicklogin" , true);
 	return mv;
 }
+
+
 @RequestMapping(value ="Registration")
 public ModelAndView Registration()
 {
@@ -74,9 +80,9 @@ public ModelAndView Registration()
 	return mv;
 }
 //userdetail
-/*
+
 @RequestMapping(value="/saveregister",method=RequestMethod.POST)
-public ModelAndView saveRegister(@ModelAttribute("user") user_detail user, BindingResult res )
+public ModelAndView saveRegister(@ModelAttribute("user") User user, BindingResult res )
 {
 	ModelAndView mv=new ModelAndView("page");
 	
@@ -87,13 +93,13 @@ public ModelAndView saveRegister(@ModelAttribute("user") user_detail user, Bindi
 	}
 	else
 	{
-		user_detailDAO.insertUser(user);
+		userDAO.addUser(user);
 		mv.setViewName("redirect:/login");
 		return mv;
 		
 	}
 	
-}*/
+}
 
 
 

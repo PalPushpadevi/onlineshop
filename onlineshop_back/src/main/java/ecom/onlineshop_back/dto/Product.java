@@ -36,7 +36,7 @@ public class Product
 	private double unitPrice;
 	
 	@Column(name=" IS_ACTIVE")
-	private boolean active;
+	private boolean active=true;
 	
 	@Column(name=" CATEGORY_ID")
 	private int categoryId;

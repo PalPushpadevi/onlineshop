@@ -1,21 +1,21 @@
-
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+         <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
  
-    <div class="container">
- <div class="topnav" id="myTopnav">
-        <div class="navbar-header">
-            <button  type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
             <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
                 <img src="${images}/newlogo1.jpg" style="background-color:#0000ff" height="30px" width="40px">
             </a>
            
         </div>
         
-        <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
                 <li  id="home"><a href="${contextRoot}/home">Home</a></li>
                 <li id="about"><a href="${contextRoot}/About">About</a></li>
@@ -31,5 +31,5 @@
 		</div>
 
     </div>
+    </nav>
 
-</div>
