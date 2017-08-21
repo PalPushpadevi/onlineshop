@@ -240,10 +240,10 @@ itemValue="id"/>
 <h4 class="modal-title"> Add New Category</h4>
 </div>
 
-<!-- modal body -->
-<div class="modal-body">
 
-<sf:form modelAttribute="category" action="${contextRoot}/manage/category" method="POST" id="categoryform">
+<div class="modal-body">
+<!-- modal body -->
+<sf:form modelAttribute="category" action="${contextRoot}/manage/category" method="POST" id="categoryForm">
 
 <div class="form-group">
 <label for="category_name" class="control-label col-md-4">Category Name</label>

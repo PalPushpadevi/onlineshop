@@ -305,7 +305,7 @@ $(function(){
 	
 	//---------validation code for category-------------
 	
-	var $categoryform = $('#categoryform');
+	var $categoryform = $('#categoryForm');
 	if(categoryform.length)
 		{
 		$categoryform.validate({

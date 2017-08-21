@@ -8,7 +8,6 @@
    <c:set var="contextRoot" value="${pageContext.request.contextPath }" />
 <!DOCTYPE html>
 <html>
-<div class="container">
 <header class="topbar">
 
     <meta charset="utf-8">
@@ -104,7 +103,7 @@
    <!-- footer -->
    
    <%@include file="./shared/footer.jsp" %>
-   </div>
+   
    
     <!-- /.container -->
 

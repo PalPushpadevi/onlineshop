@@ -22,7 +22,7 @@ public class User
 	private String lname;
 	private String email;
 	private String password;
-	private String role="user";
+	private String role="USER";
 	private String contact;
 	private String address;
 	private boolean enabled=true;
